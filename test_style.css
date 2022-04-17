@@ -1,0 +1,121 @@
+/* setting */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;400;700&family=Song+Myung&display=swap');
+
+body{
+    background-color: #12011a;
+    color: #fff;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 400;
+}
+:root{
+    --mainColor:#FFB800;
+}
+
+/* animation */
+@keyframes blink {
+    from{
+    box-shadow: 0px 0px 150px rgba(255, 255, 255, 0.7);
+    }
+    to{
+    box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.7);
+
+    }
+}
+
+/* design */
+.close{
+    display: none;
+}
+.wrap{
+    max-width: 600px;
+    padding:0 1.250em;
+    margin: 0 auto;
+}
+button[class*="btn"]{
+    border: 2px solid #FFB800;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+button[class*="btn"]:hover{
+    font-weight: 700;
+    background-color: var(--mainColor);
+}
+
+/* common 끝 */
+
+.main{
+    height: 100vh;
+    padding-top: 3rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    background-image: url(./img/bg.jpg);
+    background-size: 37.5rem;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+}
+.main::after{
+    content: '';
+    display: block;
+    width: 18.75rem;
+    height: 18.75rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 150px rgba(255, 255, 255, 0.7);
+    margin:-30.938rem auto 0;
+    animation: blink 1.5s infinite alternate ease-in-out;
+}
+.main .text{
+    font-size: 1.875rem;
+    margin: 0.9375rem;
+}
+
+.main .title{
+    width: 23.75rem;
+    font-size: 5rem;
+    margin: auto;
+    font-family: 'Song Myung', serif;
+}
+.main .title strong{
+    color: var(--mainColor);
+}
+.btn-start{
+    width: 26.875rem;
+    padding: 1.250rem 0;
+    box-sizing: border-box;
+    margin-top: 28rem;
+    font-size: 2.250rem;
+    font-weight: 700;
+}
+/* main 끝 */
+
+.question{ 
+    padding-top: 3rem;
+    text-align: center;
+}
+.question .progress{
+    width: 100%;
+    height: 0.313em;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+}
+.question .progress span{
+    float: left;
+    border-radius: 5px;
+    height: 100%;
+    width: calc(100/12*1%);
+    background-color: var(--mainColor);
+}
+
+.question .title{
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin: 4.063rem 0;
+}
+.question .btn-answer{
+    font-size: 1.25rem;
+    width: 100%;
+    padding: 1.250rem 0;
+    margin-bottom: 0.625rem;
+}
