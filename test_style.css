@@ -29,7 +29,9 @@ body{
 .wrap{
     max-width: 600px;
     padding:0 1.250em;
+    padding-top: 3rem;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 button[class*="btn"]{
     border: 2px solid #FFB800;
@@ -42,11 +44,10 @@ button[class*="btn"]:hover{
     background-color: var(--mainColor);
 }
 
-/* common 끝 */
+/* common end */
 
 .main{
     height: 100vh;
-    padding-top: 3rem;
     box-sizing: border-box;
     overflow: hidden;
     text-align: center;
@@ -62,7 +63,7 @@ button[class*="btn"]:hover{
     height: 18.75rem;
     border-radius: 50%;
     box-shadow: 0px 0px 150px rgba(255, 255, 255, 0.7);
-    margin:-30.938rem auto 0;
+    margin: -27.938rem auto 0;
     animation: blink 1.5s infinite alternate ease-in-out;
 }
 .main .text{
@@ -82,16 +83,15 @@ button[class*="btn"]:hover{
 .btn-start{
     width: 26.875rem;
     padding: 1.250rem 0;
-    box-sizing: border-box;
     margin-top: 28rem;
-    font-size: 2.250rem;
+    font-size: 2.25rem;
     font-weight: 700;
 }
-/* main 끝 */
+/* main end */
 
 .question{ 
-    padding-top: 3rem;
     text-align: center;
+    font-size: 1.25rem;
 }
 .question .progress{
     width: 100%;
@@ -108,14 +108,39 @@ button[class*="btn"]:hover{
     background-color: var(--mainColor);
 }
 
-.question .title{
-    font-size: 1.25rem;
+.question .title-question{
     line-height: 1.5;
     margin: 4.063rem 0;
 }
 .question .btn-answer{
-    font-size: 1.25rem;
     width: 100%;
     padding: 1.250rem 0;
     margin-bottom: 0.625rem;
 }
+/* question end */
+.result{
+    text-align: center;
+    font-size: 1.25rem;
+}
+.result section{
+    margin-bottom: 4.375rem;
+}
+
+.mbti .img-mbti{
+    margin: 2.188rem 0;
+}
+.mbti .title-mbti{
+    font-size: 3.125rem;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+    color: var(--mainColor);
+}
+.mbti .sub-title-mbti{
+    margin-bottom: 2.188rem;
+    font-size: 2.25rem;
+}
+.mbti .txt-mbti{
+line-height: 1.5;
+}
+
+/* result end */
