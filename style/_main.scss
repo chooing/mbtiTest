@@ -1,0 +1,156 @@
+// animation
+@keyframes blink {
+    from{box-shadow: 0px 0px 150px rgba(255, 255, 255, 0.7);}
+    to{box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.7);}
+}
+
+// design
+.main{
+    .subtit{
+        font-size: $sizeLg;
+        margin-bottom: $sizeMd;
+        @media #{$mediaMd} {font-size: $sizeMd;}
+    }
+
+    .tit{
+        font-family: 'Song Myung', serif;
+        font-size: $sizeXl2;
+        word-break: keep-all;
+        @media #{$mediaMd} {font-size: $sizeXl;}
+        strong{color: $mainColor;}
+    }
+
+    .crystal{
+        width: 100%;
+        padding-top: 95.833%;
+        background-image: url(../img/bg3.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+
+        &::before{
+            content: '';
+            display: block;
+            width: 50%;
+            padding-top: 50%;
+            border-radius: 100vw;
+            box-shadow: 0px 0px 12.5rem rgba(255, 255, 255, 0.6);
+            position: absolute;
+            left: 0; right: 0;
+            top: 24%;
+            margin: 0 auto;
+            animation: blink 1.5s infinite alternate ease-in-out;
+        }
+    }
+    .btn{
+        @include btnStyle($sizeLg);
+        @media #{$mediaMd} {font-size: $sizeMd;}
+        margin-top: $sizeSm;
+    }
+}
+// main end
+
+.question{
+    word-break: keep-all;
+
+    .progress-wrap{
+        border: 2px solid $mainColor;
+        height: $sizeMd;
+        border-radius: 50px;
+        margin-bottom: $sizeLg;
+        overflow: hidden;
+        text-align-last: left;
+
+        .progress{
+            display: inline-block;
+            width: calc(100% / 12 * 1);
+            height: 100%;
+            background-image: linear-gradient(to right, $mainColor , #ff9d00);
+        }
+    }
+
+    .img-question{max-width: 400px;}
+
+    .tit-question{
+        margin: $sizeMd 0;
+        line-height: 1.3;
+    }
+
+    .btn-answer{
+        @include btnStyle;
+        &+.btn-answer{margin-top: $sizeMd;}
+    }
+}
+// question end
+
+.result{
+    >section+section{
+        margin-top: $sizeXl2;
+    }
+    .mbti{
+        .img-mbti{max-width: 400px;}
+        .tit-mbti{
+            font-size: $sizeXl;
+            margin-top: $sizeMd;
+            font-weight: 700;
+            color: $mainColor;
+        }
+        .subtit-mbti{
+            font-size: $sizeLg;
+            margin: $sizeSm 0;
+        }
+        .txt-mbti{
+            line-height: 1.5;
+        }
+    }//mbti end
+
+    .pair{
+        .title-pair{
+            @include resultTit;
+            margin-bottom: 1.25em;
+        }
+        .list-pair{
+            display: flex;
+            gap: 1.25em;
+            .destiny{
+                width: 50%;
+                h3{
+                    margin: -2em 0 $sizeSm;
+                    display: inline-block;
+                    padding: $sizeSm;
+                    border-radius: 5px;
+                    background-color: $mainColor;
+                }
+                h4{
+                    font-size: $sizeSm;
+                    line-height: 1.5;
+                    strong{
+                        font-size: $sizeMd;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }//pair end
+    
+    .share{
+        .title-share{
+            @include resultTit;
+            margin-bottom: 0.5em;
+        }
+        .txt-share{
+            line-height: 1.5;    
+            &+.txt-share{margin-bottom: 1.25em;}
+        }
+        .share-btn-wrap{
+            display: flex;
+            justify-content: center;
+            gap: $sizeSm;
+        }
+    }//shaer end
+    .btn-restart{
+        margin-top: $sizeXl;
+        @include btnStyle($sizeLg);
+    }
+}

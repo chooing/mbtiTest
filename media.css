@@ -1,0 +1,4 @@
+@media screen and (max-width: 414px) {
+    .main .text{ font-size: 1.25rem;}
+    .main .title{font-size: 3.75rem;}
+}

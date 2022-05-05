@@ -1,0 +1,60 @@
+// font family
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;400;700&family=Song+Myung&display=swap');
+
+// var
+$mainColor: #FFB800;
+$subColor:#12011a;
+$sizeXl2: 5rem; //80px
+$sizeXl: 4rem; //64px
+$sizeLg: 2rem; //32px
+$sizeMd: 1.25rem; //20px
+$sizeSm: 1rem; //16px
+$mediaMd : "screen and (max-width: 414px)";
+
+// mixin
+@mixin btnStyle($fontSize:inherit) {
+    width: 100%;
+    padding: $sizeMd $sizeSm;
+    border: 2px solid $mainColor;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: $fontSize;
+
+    &:hover{
+        background-color: $mainColor;
+        color: $subColor;
+    }
+
+    @media #{$mediaMd} {padding: $sizeSm;}
+}
+
+@mixin resultTit{
+    font-size: $sizeLg;
+    color:$mainColor;
+    font-weight: 700;
+}
+
+
+// layout
+body{
+    background-color: #12011a;
+    color: #ddd;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 400; 
+    font-size: $sizeMd;   
+    text-align: center;
+}
+
+.wrap{
+    max-width: 600px;
+    padding:2.25em 1.25em;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.close{display: none;}
+
+h1, h1, h3, h4, p, li{
+    word-break: keep-all;
+}

@@ -1,0 +1,296 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;400;700&family=Song+Myung&display=swap");
+body {
+  background-color: #12011a;
+  color: #ddd;
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.wrap {
+  max-width: 600px;
+  padding: 2.25em 1.25em;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.close {
+  display: none;
+}
+
+h1, h1, h3, h4, p, li {
+  word-break: keep-all;
+}
+
+@-webkit-keyframes blink {
+  from {
+    -webkit-box-shadow: 0px 0px 150px rgba(255, 255, 255, 0.7);
+            box-shadow: 0px 0px 150px rgba(255, 255, 255, 0.7);
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.7);
+            box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.7);
+  }
+}
+
+@keyframes blink {
+  from {
+    -webkit-box-shadow: 0px 0px 150px rgba(255, 255, 255, 0.7);
+            box-shadow: 0px 0px 150px rgba(255, 255, 255, 0.7);
+  }
+  to {
+    -webkit-box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.7);
+            box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.7);
+  }
+}
+
+.main .subtit {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+@media screen and (max-width: 414px) {
+  .main .subtit {
+    font-size: 1.25rem;
+  }
+}
+
+.main .tit {
+  font-family: 'Song Myung', serif;
+  font-size: 5rem;
+  word-break: keep-all;
+}
+
+@media screen and (max-width: 414px) {
+  .main .tit {
+    font-size: 4rem;
+  }
+}
+
+.main .tit strong {
+  color: #FFB800;
+}
+
+.main .crystal {
+  width: 100%;
+  padding-top: 95.833%;
+  background-image: url(../img/bg3.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.main .crystal::before {
+  content: '';
+  display: block;
+  width: 50%;
+  padding-top: 50%;
+  border-radius: 100vw;
+  -webkit-box-shadow: 0px 0px 12.5rem rgba(255, 255, 255, 0.6);
+          box-shadow: 0px 0px 12.5rem rgba(255, 255, 255, 0.6);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 24%;
+  margin: 0 auto;
+  -webkit-animation: blink 1.5s infinite alternate ease-in-out;
+          animation: blink 1.5s infinite alternate ease-in-out;
+}
+
+.main .btn {
+  width: 100%;
+  padding: 1.25rem 1rem;
+  border: 2px solid #FFB800;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.main .btn:hover {
+  background-color: #FFB800;
+  color: #12011a;
+}
+
+@media screen and (max-width: 414px) {
+  .main .btn {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .main .btn {
+    font-size: 1.25rem;
+  }
+}
+
+.question {
+  word-break: keep-all;
+}
+
+.question .progress-wrap {
+  border: 2px solid #FFB800;
+  height: 1.25rem;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  text-align-last: left;
+}
+
+.question .progress-wrap .progress {
+  display: inline-block;
+  width: calc(100% / 12 * 1);
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#FFB800), to(#ff9d00));
+  background-image: linear-gradient(to right, #FFB800, #ff9d00);
+}
+
+.question .img-question {
+  max-width: 400px;
+}
+
+.question .tit-question {
+  margin: 1.25rem 0;
+  line-height: 1.3;
+}
+
+.question .btn-answer {
+  width: 100%;
+  padding: 1.25rem 1rem;
+  border: 2px solid #FFB800;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: inherit;
+}
+
+.question .btn-answer:hover {
+  background-color: #FFB800;
+  color: #12011a;
+}
+
+@media screen and (max-width: 414px) {
+  .question .btn-answer {
+    padding: 1rem;
+  }
+}
+
+.question .btn-answer + .btn-answer {
+  margin-top: 1.25rem;
+}
+
+.result > section + section {
+  margin-top: 5rem;
+}
+
+.result .mbti .img-mbti {
+  max-width: 400px;
+}
+
+.result .mbti .tit-mbti {
+  font-size: 4rem;
+  margin-top: 1.25rem;
+  font-weight: 700;
+  color: #FFB800;
+}
+
+.result .mbti .subtit-mbti {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.result .mbti .txt-mbti {
+  line-height: 1.5;
+}
+
+.result .pair .title-pair {
+  font-size: 2rem;
+  color: #FFB800;
+  font-weight: 700;
+  margin-bottom: 1.25em;
+}
+
+.result .pair .list-pair {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25em;
+}
+
+.result .pair .list-pair .destiny {
+  width: 50%;
+}
+
+.result .pair .list-pair .destiny h3 {
+  margin: -2em 0 1rem;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #FFB800;
+}
+
+.result .pair .list-pair .destiny h4 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.result .pair .list-pair .destiny h4 strong {
+  font-size: 1.25rem;
+  display: block;
+}
+
+.result .share .title-share {
+  font-size: 2rem;
+  color: #FFB800;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.result .share .txt-share {
+  line-height: 1.5;
+}
+
+.result .share .txt-share + .txt-share {
+  margin-bottom: 1.25em;
+}
+
+.result .share .share-btn-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+.result .btn-restart {
+  margin-top: 4rem;
+  width: 100%;
+  padding: 1.25rem 1rem;
+  border: 2px solid #FFB800;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.result .btn-restart:hover {
+  background-color: #FFB800;
+  color: #12011a;
+}
+
+@media screen and (max-width: 414px) {
+  .result .btn-restart {
+    padding: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

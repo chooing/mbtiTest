@@ -1,12 +1,6 @@
 /* setting */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;400;700&family=Song+Myung&display=swap');
 
-body{
-    background-color: #12011a;
-    color: #fff;
-    font-family: 'Noto Serif KR', serif;
-    font-weight: 400;
-}
 :root{
     --mainColor:#FFB800;
 }
@@ -21,18 +15,28 @@ body{
 
     }
 }
+/* layout */
 
-/* design */
-.close{
-    display: none;
+body{
+    background-color: #12011a;
+    color: #fff;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 400;
 }
 .wrap{
+    width: 100%;
     max-width: 600px;
-    padding:0 1.250em;
+    padding:0 1.25em;
     padding-top: 3rem;
     margin: 0 auto;
     box-sizing: border-box;
 }
+
+.close{
+    display: none;
+}
+
+/* design */
 button[class*="btn"]{
     border: 2px solid #FFB800;
     box-sizing: border-box;
@@ -49,41 +53,63 @@ button[class*="btn"]:hover{
 .main{
     height: 100vh;
     box-sizing: border-box;
-    overflow: hidden;
+    /* overflow: hidden; */
     text-align: center;
-    background-image: url(./img/bg.jpg);
-    background-size: 37.5rem;
-    background-repeat: no-repeat;
-    background-position: center 30%;
+    
 }
-.main::after{
-    content: '';
-    display: block;
-    width: 18.75rem;
-    height: 18.75rem;
-    border-radius: 50%;
-    box-shadow: 0px 0px 150px rgba(255, 255, 255, 0.7);
-    margin: -27.938rem auto 0;
-    animation: blink 1.5s infinite alternate ease-in-out;
-}
+
 .main .text{
     font-size: 1.875rem;
     margin: 0.9375rem;
 }
 
 .main .title{
-    width: 23.75rem;
+    max-width: 23.75rem;
     font-size: 5rem;
     margin: auto;
     font-family: 'Song Myung', serif;
+    word-break: keep-all;
 }
 .main .title strong{
     color: var(--mainColor);
 }
+
+.crystal{
+    width: 100%;
+    /* background-color: #fff; */
+    background-image: url(./img/bg3.jpg);
+    padding-top: 95.833%;
+    background-size: 100%;
+    background-position: center;
+    /* background-size: 37.5rem; */
+    background-repeat: no-repeat;
+    /* background-position: center 30%; */
+    /* position: relative; */
+}
+
+
+.crystal::before{
+    content: '';
+    /* background-color: #FFB800; */
+    display: block;
+    width: 50%;
+    /* padding-top: 50%; */
+    border-radius: 100vw;
+    box-shadow: 0px 0px 12.5rem rgba(255, 255, 255, 0.6);
+    /* position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 6%; */
+    /* margin: -27.938rem auto 0; */
+    /* margin: calc(-100vh + 70%) auto 0; */
+    animation: blink 1.5s infinite alternate ease-in-out;
+}
 .btn-start{
-    width: 26.875rem;
+    width: 100%;
+    max-width: 26.875rem;
     padding: 1.250rem 0;
-    margin-top: 28rem;
+    /* margin-top: 28rem; */
     font-size: 2.25rem;
     font-weight: 700;
 }
