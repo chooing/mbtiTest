@@ -11,17 +11,29 @@ body {
 
 .wrap {
   max-width: 600px;
-  padding: 2.25em 1.25em;
+  padding: 1.5em 1.25em;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 414px) {
+  .wrap {
+    min-height: 100vh;
+  }
 }
 
 .close {
   display: none;
 }
 
-h1, h1, h3, h4, p, li {
+h1, h2, h3, h4, p, li {
   word-break: keep-all;
 }
 
@@ -126,7 +138,7 @@ h1, h1, h3, h4, p, li {
 
 @media screen and (max-width: 414px) {
   .main .btn {
-    font-size: 1.25rem;
+    margin-top: 0.5em;
   }
 }
 
@@ -199,11 +211,27 @@ h1, h1, h3, h4, p, li {
   margin-top: 1.25rem;
   font-weight: 700;
   color: #FFB800;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 414px) {
+  .result .mbti .tit-mbti {
+    font-size: 2rem;
+  }
 }
 
 .result .mbti .subtit-mbti {
   font-size: 2rem;
+  display: inline-block;
+  padding: 0.25em;
+  border-bottom: 3px solid #FFB800;
   margin: 1rem 0;
+}
+
+@media screen and (max-width: 414px) {
+  .result .mbti .subtit-mbti {
+    font-size: 1.25rem;
+  }
 }
 
 .result .mbti .txt-mbti {
@@ -234,6 +262,8 @@ h1, h1, h3, h4, p, li {
   padding: 1rem;
   border-radius: 5px;
   background-color: #FFB800;
+  font-weight: 700;
+  color: #12011a;
 }
 
 .result .pair .list-pair .destiny h4 {
@@ -244,6 +274,7 @@ h1, h1, h3, h4, p, li {
 .result .pair .list-pair .destiny h4 strong {
   font-size: 1.25rem;
   display: block;
+  font-weight: 700;
 }
 
 .result .share .title-share {
@@ -257,8 +288,14 @@ h1, h1, h3, h4, p, li {
   line-height: 1.5;
 }
 
-.result .share .txt-share + .txt-share {
+.result .share .txt-share:last-of-type {
   margin-bottom: 1.25em;
+}
+
+@media screen and (max-width: 414px) {
+  .result .share .txt-share {
+    font-size: 1rem;
+  }
 }
 
 .result .share .share-btn-wrap {

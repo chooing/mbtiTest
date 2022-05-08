@@ -6,6 +6,7 @@
 
 // design
 .main{
+
     .subtit{
         font-size: $sizeLg;
         margin-bottom: $sizeMd;
@@ -45,8 +46,8 @@
     }
     .btn{
         @include btnStyle($sizeLg);
-        @media #{$mediaMd} {font-size: $sizeMd;}
         margin-top: $sizeSm;
+        @media #{$mediaMd} {margin-top:0.5em;}
     }
 }
 // main end
@@ -95,10 +96,16 @@
             margin-top: $sizeMd;
             font-weight: 700;
             color: $mainColor;
+            line-height: 1.2;
+            @media #{$mediaMd} {font-size: $sizeLg;}
         }
         .subtit-mbti{
             font-size: $sizeLg;
+            display: inline-block;
+            padding: 0.25em;
+            border-bottom: 3px solid $mainColor;
             margin: $sizeSm 0;
+            @media #{$mediaMd} {font-size: $sizeMd;}
         }
         .txt-mbti{
             line-height: 1.5;
@@ -121,6 +128,8 @@
                     padding: $sizeSm;
                     border-radius: 5px;
                     background-color: $mainColor;
+                    font-weight: 700;
+                    color: $subColor;
                 }
                 h4{
                     font-size: $sizeSm;
@@ -128,6 +137,7 @@
                     strong{
                         font-size: $sizeMd;
                         display: block;
+                        font-weight: 700;
                     }
                 }
             }
@@ -141,7 +151,8 @@
         }
         .txt-share{
             line-height: 1.5;    
-            &+.txt-share{margin-bottom: 1.25em;}
+            &:last-of-type{margin-bottom: 1.25em;}
+            @media #{$mediaMd} {font-size: $sizeSm;}
         }
         .share-btn-wrap{
             display: flex;

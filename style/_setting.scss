@@ -48,13 +48,18 @@ body{
 
 .wrap{
     max-width: 600px;
-    padding:2.25em 1.25em;
+    padding:1.5em 1.25em;
     margin: 0 auto;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    @media #{$mediaMd} {
+        min-height: 100vh;
+    }
 }
 
 .close{display: none;}
 
-h1, h1, h3, h4, p, li{
+h1, h2, h3, h4, p, li{
     word-break: keep-all;
 }
